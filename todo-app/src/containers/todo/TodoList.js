@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import MuCard from '../../components/card/MuCard';
+import { MuCard } from '../../components';
 import { viewLinks } from '../../configs/links';
 import TodoItem from './TodoItem';
 

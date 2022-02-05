@@ -1,8 +1,8 @@
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-import MuIconButton from '../../components/button/MuIconButton';
-import MuCard from '../../components/card/MuCard';
+import { MuIconButton } from '../../components';
+import { MuCard } from '../../components';
 
 const TodoItem = (props) => {
   const { title } = props;
