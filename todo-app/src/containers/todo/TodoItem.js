@@ -8,12 +8,12 @@ const TodoItem = (props) => {
   const { title } = props;
 
   return (
-    <MuCard className='todo_item'>
+    <MuCard className='todo_list--item'>
       <p className='me-auto'>{title}</p>
       <MuIconButton>
         <FontAwesomeIcon icon={faTrash} />
       </MuIconButton>
-      <Link to='/' className='todo_edit'>
+      <Link to='/' className='todo_list--edit-btn'>
         <FontAwesomeIcon icon={faEdit} />
       </Link>
     </MuCard>

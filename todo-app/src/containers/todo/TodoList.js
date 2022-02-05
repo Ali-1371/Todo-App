@@ -10,13 +10,13 @@ const mockTodoList = [
 ];
 const TodoList = () => {
   return (
-    <MuCard className='todo p-5'>
+    <MuCard className='todo_list p-5'>
       <div className='text-center'>
         <p className='mb-3 fw-bold font-size-large'>
           {commonTranslation.todoList}
         </p>
       </div>
-      <Link to={viewLinks.todoAdd} className='todo_add-btn'>
+      <Link to={viewLinks.todoAdd} className='todo_list--add-btn'>
         {commonTranslation.addTask}
       </Link>
       <div className='text-center'>
