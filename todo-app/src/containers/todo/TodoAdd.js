@@ -1,5 +1,7 @@
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import MuIconButton from '../../components/button/MuIconButton';
 import MuTextField from '../../components/input/textField/MuTextField';
 import { constant } from '../../configs/constants';
@@ -7,6 +9,7 @@ import { enumeration } from '../../configs/enumeration';
 import { isInputValid } from '../../helpers/validationHelpers';
 import useInput from '../../hooks/use-input';
 import { todoTranslation } from '../../resources/todo/todoTranslation';
+import { addTodoList } from '../../redux/actions/todo-action';
 
 const TodoAdd = () => {
   const {
@@ -16,7 +19,17 @@ const TodoAdd = () => {
     inputBlurHandler,
   } = useInput('', isInputValid);
 
-  const addTodoClicked = () => {};
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+
+  const addTodoClicked = () => {
+    dispatch(
+      addTodoList(todoValue, () => {
+        navigate('/');
+      })
+    );
+  };
 
   const handleKeyDown = (e) => {
     if (e.keyCode === enumeration.keyboard.enter) addTodoClicked();
@@ -40,7 +53,7 @@ const TodoAdd = () => {
         onBlur={inputBlurHandler}
       />
       <MuIconButton
-        className='ms-4'
+        className='ms-4 me-1 px-4'
         onClick={addTodoClicked}
         disabled={isTodoHasError}
       >
