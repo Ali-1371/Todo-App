@@ -2,7 +2,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 const MuLoading = () => {
   return (
-    <div>
+    <div className='Mu_loading'>
       <CircularProgress />
     </div>
   );

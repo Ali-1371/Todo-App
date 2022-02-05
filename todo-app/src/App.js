@@ -1,11 +1,15 @@
 import Layout from './containers/layout/Layout';
 import AppRoutes from './AppRoutes';
+import Notification from './containers/notification/Notification';
 
 function App() {
   return (
-    <Layout>
-      <AppRoutes />
-    </Layout>
+    <>
+      <Notification />
+      <Layout>
+        <AppRoutes />
+      </Layout>
+    </>
   );
 }
 
