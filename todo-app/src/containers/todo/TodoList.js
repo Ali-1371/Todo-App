@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { MuCard } from '../../components';
 import { viewLinks } from '../../configs/links';
+import { commonTranslation } from '../../resources/translations';
 import TodoItem from './TodoItem';
 
 const mockTodoList = [
@@ -11,10 +12,12 @@ const TodoList = () => {
   return (
     <MuCard className='todo p-5'>
       <div className='text-center'>
-        <p className='mb-3 fw-bold font-size-large'>Todo list</p>
+        <p className='mb-3 fw-bold font-size-large'>
+          {commonTranslation.todoList}
+        </p>
       </div>
       <Link to={viewLinks.todoAdd} className='todo_add-btn'>
-        Add a task
+        {commonTranslation.addTask}
       </Link>
       <div className='text-center'>
         {mockTodoList.map(({ id, title }) => (
