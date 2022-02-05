@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 2rem 2.5rem;
+  @include backgroundGradient($purple, $purple-light);
+
+  &_nav {
+    ul {
+      list-style: none;
+    }
+    li:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+
+  .active {
+    color: $green-light;
+  }
+}

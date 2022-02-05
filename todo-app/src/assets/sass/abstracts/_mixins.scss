@@ -1,0 +1,7 @@
+@mixin backgroundGradient($colorPrimary, $colorSecondary) {
+  background-image: linear-gradient(
+    100.92deg,
+    $colorPrimary 15.09%,
+    $colorSecondary 78.44%
+  );
+}
