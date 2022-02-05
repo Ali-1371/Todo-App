@@ -1,0 +1,38 @@
+.todo {
+  @include backgroundGradient($white, $gray);
+
+  &_add-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: $black;
+    background-color: rgba($gray, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &_item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  &_item:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  &_edit {
+    display: flex;
+    padding: 1rem;
+  }
+
+  &_edit:hover {
+    background-color: rgba($gray, 0.1);
+    border-radius: 50%;
+  }
+
+  &_edit,
+  &_edit:hover {
+    color: rgba($black, 0.54);
+  }
+}
