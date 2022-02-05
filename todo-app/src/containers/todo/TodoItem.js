@@ -1,8 +1,9 @@
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-import { MuIconButton } from '../../components';
-import { MuCard } from '../../components';
+import { MuCard, MuIconButton } from '../../components';
+import { viewLinks } from '../../configs/links';
+import { stringHelper } from '../../helpers/commonHelper';
 
 const TodoItem = (props) => {
   const { title } = props;
@@ -13,7 +14,10 @@ const TodoItem = (props) => {
       <MuIconButton>
         <FontAwesomeIcon icon={faTrash} />
       </MuIconButton>
-      <Link to='/' className='todo_list--edit-btn'>
+      <Link
+        to={stringHelper(viewLinks.todoEdit, '1')}
+        className='todo_list--edit-btn'
+      >
         <FontAwesomeIcon icon={faEdit} />
       </Link>
     </MuCard>

@@ -23,7 +23,7 @@ const MuTextField = (props) => {
       id={id}
       variant={variant}
       disabled={disabled}
-      className={className}
+      className={`text-field ${className}`}
       onChange={onChange}
       {...otherProps}
     />

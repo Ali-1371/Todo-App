@@ -24,7 +24,7 @@ const TodoAdd = () => {
   return (
     <div className='d-flex justify-content-between border border-3 rounded py-2'>
       <MuTextField
-        className='todo_add--text ms-3'
+        className='ms-3'
         onKeyDown={handleKeyDown}
         error={isTodoHasError}
         fullWidth
