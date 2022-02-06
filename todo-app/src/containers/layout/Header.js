@@ -10,7 +10,7 @@ const navLinks = [
 
 const Header = () => {
   return (
-    <header className='header mb-5'>
+    <header className='header px-4 mb-5'>
       <h1 className='me-auto'>{headerTranslation.taskManagement}</h1>
       <nav className='header_nav'>
         <ul className='d-flex m-0 p-0'>

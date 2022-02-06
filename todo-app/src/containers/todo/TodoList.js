@@ -12,10 +12,6 @@ import {
 } from '../../resources/translations';
 import TodoItem from './TodoItem';
 
-const mockTodoList = [
-  { title: 'Task 1', id: '1' },
-  { title: 'Task 2', id: '2' },
-];
 let isInitial = true;
 
 const TodoList = () => {

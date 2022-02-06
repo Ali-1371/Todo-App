@@ -5,7 +5,6 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 2rem 2.5rem;
   @include backgroundGradient($purple, $purple-light);
 
   &_nav {
