@@ -1,7 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const todoSlice = createSlice({
-  name: "todo",
+  name: 'todo',
   initialState: {
     isLoading: false,
     todos: [],
@@ -25,7 +25,7 @@ const todoSlice = createSlice({
     editTodo(state, action) {
       state.todos = state.todos.map((todo) =>
         todo.id === action.payload.id
-          ? { title: action.payload.title, id: action.payload.id }
+          ? { ...todo, title: action.payload.title }
           : todo
       );
       state.isLoading = false;

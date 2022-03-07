@@ -3,8 +3,7 @@ import { constant } from '../configs/constants';
 
 const httpRequest = (method, url, params, data) => {
   const axiosInstance = axios.create({
-    baseURL:
-      'https://react-todo-app-f2db9-default-rtdb.asia-southeast1.firebasedatabase.app/',
+    baseURL: 'https://react-todo-1380d-default-rtdb.firebaseio.com/',
     timeout: 10000,
     headers: {
       'Content-Type': 'application/json',

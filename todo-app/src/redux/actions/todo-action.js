@@ -1,12 +1,12 @@
-import { todoActions } from "../reducers/todo-slice";
-import { apiLinks } from "../../configs/links";
+import { todoActions } from '../reducers/todo-slice';
+import { apiLinks } from '../../configs/links';
 import {
   deleteRequest,
   getRequest,
   postRequest,
   putRequest,
-} from "../../services/httpRequest";
-import { stringHelper } from "../../helpers/commonHelper";
+} from '../../services/httpRequest';
+import { stringHelper } from '../../helpers/commonHelper';
 
 export const getTodoList = () => (dispatch) => {
   dispatch(todoActions.loading());
